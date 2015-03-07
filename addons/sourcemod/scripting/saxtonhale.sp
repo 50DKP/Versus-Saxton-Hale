@@ -6311,6 +6311,10 @@ FindVersionData(Handle:panel, versionindex)
     switch (versionindex) // DrawPanelText(panel, "1) .");
     {
         // Unnerfed the Easter Bunny's rage.
+        case 70: //1.53
+        {
+            DrawPanelItem(panel, "1) Split saxtonhale.sp into seperate files. (WildCard65, MAJOR CHANGE!)");
+        }
         case 69: //1.52
         {
             DrawPanelText(panel, "1) Added the new festive/other weapons!");
