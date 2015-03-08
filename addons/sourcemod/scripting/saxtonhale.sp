@@ -1219,7 +1219,7 @@ public Action:Timer_Announce(Handle:hTimer)
             }
             case 5:
             {
-                String:version[2][90];
+                char version[2][90]; //Eh how does compiler fail on this?
                 GetVersionInfo(GetMaxVersion(), version, 90);
                 announcecount = 0;
                 CPrintToChatAll("{olive}[VSH]{default} %t", "vsh_last_update", version[0], version[1]);
