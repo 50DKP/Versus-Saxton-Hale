@@ -170,10 +170,10 @@ GetVersionDate(vIndex, String:versionDate[], vSize)
         strcopy(versionDate, vSize, haleversiondates[vIndex]);
 }
 
-GetVersionInfo(vIndex, String:version[2][], vSize, )
+GetVersionInfo(vIndex, String:version[2][], vSize)
 {
     GetVersionTitle(vIndex, version[0], vSize);
-    GetVersionDate(vIndex, version[1], vDateSize);
+    GetVersionDate(vIndex, version[1], vSize);
 }
 
 FindVersionData(Handle:panel, versionindex)

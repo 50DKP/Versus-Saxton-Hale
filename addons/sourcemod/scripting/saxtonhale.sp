@@ -1219,7 +1219,7 @@ public Action:Timer_Announce(Handle:hTimer)
             }
             case 5:
             {
-                String version[2][90];
+                String:version[2][90];
                 GetVersionInfo(GetMaxVersion(), version, 90);
                 announcecount = 0;
                 CPrintToChatAll("{olive}[VSH]{default} %t", "vsh_last_update", version[0], version[1]);
@@ -6010,7 +6010,7 @@ public HalePanelH(Handle:menu, MenuAction:action, param1, param2)
             case 3:
                 HelpPanel2(param1);
             case 4:
-                NewPanel(param1, maxversion);
+                NewPanel(param1, GetMaxVersion());
             case 5:
                 QueuePanel(param1);
             case 6:
@@ -6092,8 +6092,8 @@ public NewPanelH(Handle:menu, MenuAction:action, param1, param2)
             }
             case 2:
             {
-                if (curHelp[param1] >= maxversion)
-                    NewPanel(param1, maxversion);
+                if (curHelp[param1] >= GetMaxVersion())
+                    NewPanel(param1, GetMaxVersion());
                 else
                     NewPanel(param1, ++curHelp[param1]);
             }
@@ -6104,7 +6104,7 @@ public NewPanelH(Handle:menu, MenuAction:action, param1, param2)
 public Action:NewPanelCmd(client, args)
 {
     if (!client) return Plugin_Handled;
-    NewPanel(client, maxversion);
+    NewPanel(client, GetMaxVersion());
     return Plugin_Handled;
 }
 public Action:NewPanel(client, versionindex)
